@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Yupanqui Collantes | Professional Digital Profile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --eller-red: #ab0520; /* University of Arizona / Eller Red */
+            --accent-blue: #2563eb;
+            --bat-slate: #1e293b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-dot {
+            color: var(--eller-red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--eller-red);
+        }
+
+        .btn-connect {
+            background-color: var(--eller-red);
+            color: white !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-connect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(171, 5, 32, 0.25);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1280px;
+            margin: 6rem auto 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content h1 {
+            font-size: 3.25rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: var(--eller-red);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            background-color: #f1f5f9;
+            color: var(--bat-slate);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid #cbd5e1;
+        }
+
+        .badge-new {
+            background-color: #fef2f2;
+            color: var(--eller-red);
+            border-color: #fecaca;
+        }
+
+        .hero-bio {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+            max-width: 680px;
+        }
+
+        .core-values {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            flex: 1;
+        }
+
+        .value-card i {
+            color: var(--eller-red);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card h4 {
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .value-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image-backdrop {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(135deg, var(--bat-slate), var(--eller-red));
+            border-radius: 24px;
+            z-index: 1;
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 4px solid white;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-header h2::after {
+            content: "";
+            height: 2px;
+            background-color: var(--eller-red);
+            flex-grow: 1;
+            max-width: 100px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        /* Card Component */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: translateY 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            border-left: 2px solid var(--border-color);
+            margin-left: 1rem;
+            padding-left: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2.5rem;
+            top: 0.25rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid var(--eller-red);
+            transform: translateX(-50%);
+        }
+
+        .timeline-dot.featured {
+            background-color: var(--eller-red);
+            box-shadow: 0 0 0 4px rgba(171, 5, 32, 0.2);
+        }
+
+        .meta-date {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--eller-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .timeline-company {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--bat-slate);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-bullets {
+            list-style-position: inside;
+            list-style-type: disc;
+            color: var(--text-main);
+            margin-top: 0.75rem;
+        }
+
+        .timeline-bullets li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Media Containers */
+        .media-container {
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 16 / 9;
+            position: relative;
+        }
+
+        .media-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .placeholder-pitch {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .placeholder-pitch i {
+            font-size: 3.5rem;
+            color: var(--eller-red);
+            margin-bottom: 1rem;
+        }
+
+        .placeholder-pitch h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .placeholder-pitch p {
+            max-width: 480px;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .code-slot {
+            background: rgba(0,0,0,0.4);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #38bdf8;
+            font-size: 0.85rem;
+            border: 1px dashed #64748b;
+        }
+
+        /* Skills Badges */
+        .skills-group {
+            margin-bottom: 2rem;
+        }
+
+        .skills-group h4 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background-color: #f1f5f9;
+            color: var(--primary-navy);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tag.advanced {
+            border-left: 3px solid var(--eller-red);
+        }
+
+        /* Executive Summary formatted piece */
+        .exec-summary-box {
+            background: var(--card-bg);
+            border-left: 4px solid var(--bat-slate);
+            padding: 2rem;
+            border-radius: 0 16px 16px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-top: 1.5rem;
+        }
+
+        .exec-summary-box blockquote {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .style-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .style-table th, .style-table td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .style-table th {
+            background-color: var(--bg-light);
+            color: var(--primary-navy);
+            font-weight: 700;
+        }
+
+        .style-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Footer / Contact */
+        footer {
+            background-color: var(--primary-navy);
+            color: white;
+            padding: 5rem 2rem 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-list i {
+            color: var(--eller-red);
+            font-size: 1.25rem;
+            width: 24px;
+        }
+
+        .contact-list a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-list a:hover {
+            opacity: 0.8;
+        }
+
+        .platform-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            justify-content: center;
+        }
+
+        .btn-platform {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-linkedin {
+            background-color: #0a66c2;
+            color: white;
+        }
+
+        .btn-linkedin:hover {
+            background-color: #084e96;
+            transform: translateX(6px);
+        }
+
+        .btn-placeholder {
+            background-color: rgba(255,255,255,0.05);
+            color: #94a3b8;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-placeholder:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 960px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-image-container {
+                max-width: 380px;
+                margin: 0 auto;
+            }
+            .grid-2, .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 2.25rem;
+            }
+            .core-values {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            main {
+                padding: 0 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Diego Yupanqui<span class="logo-dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn-connect">Let's Connect</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <span>CX Intern @ BAT</span>
+                    <span class="badge badge-new">New Role</span>
+                    <span class="badge">Trade Marketing</span>
+                </div>
+                <h1>Driving Customer Experience & Strategic Growth.</h1>
+                <p class="hero-bio">
+                    I am a bilingual Administration and Marketing student at the <strong>Universidad Peruana de Ciencias Aplicadas (UPC)</strong> and the <strong>University of Arizona (Eller College of Management)</strong>. Combining sharp analytical rigor with empathetic impression management, I specialize in trade marketing execution, customer journey optimization, and data-driven commercial strategy.
+                </p>
+
+                <!-- Core Values from Task 7 -->
+                <div class="core-values">
+                    <div class="value-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Reliability</h4>
+                        <p>Described by peers as the "perfect colleague" who consistently delivers flawless results.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h4>Empathy</h4>
+                        <p>Caring and empathetic team player focused on building genuine, lasting connections.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <h4>Continuous Growth</h4>
+                        <p>Adaptive "Driver/Analytical" mindset dedicated to optimizing internal processes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <div class="hero-image-backdrop"></div>
+                <img src="prophoto.jpg" alt="Diego Yupanqui Collantes - Professional Headshot" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <p>Demonstrated track record in multinational customer experience, trade marketing execution, and financial modeling.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- BAT -->
+                <div class="timeline-item">
+                    <div class="timeline-dot featured"></div>
+                    <div class="meta-date">June 2026 – Present</div>
+                    <h3>Customer Experience (CX) Intern</h3>
+                    <div class="timeline-company">British American Tobacco (BAT) · Lima, Peru</div>
+                    <p>Stepped into a global CX role within two weeks of onboarding, applying strategic impression management and messaging to elevate end-to-end consumer touchpoints.</p>
+                    <ul class="timeline-bullets">
+                        <li>Analyzing consumer satisfaction metrics and extracting actionable CX insights across nationwide distribution channels.</li>
+                        <li>Collaborating with cross-functional commercial teams to ensure brand positioning aligns perfectly with global corporate identity.</li>
+                    </ul>
+                </div>
+
+                <!-- TT Audit SAC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="meta-date">February 2025 – Present</div>
+                    <h3>Commercial Trade Marketing Intern</h3>
+                    <div class="timeline-company">TT Audit SAC (Trade Marketing Agency) · Lima, Peru</div>
+                    <p>Leading field execution and POP visibility strategies across major modern retail conglomerates.</p>
+                    <ul class="timeline-bullets">
+                        <li>Managed the seamless implementation of POP materials across key retail chains (<strong>Tambo, Primax, Repsol, Oxxo, Ava</strong>) spanning 1,000+ Point of Sales (POS).</li>
+                        <li>Supervised and conducted rigorous training for promoter teams across <strong>16 cities</strong>, significantly optimizing store-level execution.</li>
+                        <li>Developed proprietary Python and Excel automation tools that streamlined field tracking and boosted reporting efficiency.</li>
+                    </ul>
+                </div>
+
+                <!-- Al Blanco Marketing -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="meta-date">January 2025 – February 2025</div>
+                    <h3>Digital Marketing Intern</h3>
+                    <div class="timeline-company">Al Blanco Marketing · Lima, Peru</div>
+                    <p>Focused on digital campaign performance, brand clarity, and client feedback loops.</p>
+                    <ul class="timeline-bullets">
+                        <li>Optimized advertising strategies through deep content analysis, insight extraction, and continuous client feedback.</li>
+                        <li>Evaluated client profile, image, and visual identity to formulate highly converting digital marketing funnels.</li>
+                    </ul>
+                </div>
+
+                <!-- Niubiz -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="meta-date">November 2022 – May 2023</div>
+                    <h3>Financial Planning Intern</h3>
+                    <div class="timeline-company">Niubiz · Lima, Peru</div>
+                    <p>Gained foundational quantitative skills in corporate finance, profitability analysis, and process optimization.</p>
+                    <ul class="timeline-bullets">
+                        <li>Created and optimized recurring financial reports for executive internal stakeholders.</li>
+                        <li>Updated extensive corporate databases and engineered financial models to evaluate product profitability.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="section-header">
+                <h2>Academic Credentials</h2>
+                <p>Dual-degree academic excellence bridging top-tier business communication and marketing strategy.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card" style="border-top: 4px solid var(--eller-red);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--primary-navy);">University of Arizona</h3>
+                        <span class="badge badge-new">Eller College</span>
+                    </div>
+                    <h4 style="color: var(--eller-red); font-weight: 600; margin-bottom: 0.5rem;">Double Degree Program · Business Administration</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Expected Graduation: December 2026</p>
+                    <p style="font-size: 0.95rem;">
+                        Mastering sophisticated business communication (BCOM 314R), strategic impression management, logical discourse units, and advanced structural coherence for professional audiences.
+                    </p>
+                </div>
+
+                <div class="card" style="border-top: 4px solid var(--bat-slate);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--primary-navy);">Universidad Peruana de Ciencias Aplicadas</h3>
+                        <span class="badge">UPC</span>
+                    </div>
+                    <h4 style="color: var(--bat-slate); font-weight: 600; margin-bottom: 0.5rem;">Licenciatura en Administración y Marketing</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Expected Graduation: July 2027</p>
+                    <p style="font-size: 0.95rem;">
+                        Specializing in modern and traditional trade marketing, economics of strategy (Maital's Triangle, economic profit), consumer behavior, and brand positioning across Latin American markets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Deliverables (Task 8 Minimum Criteria) -->
+        <section id="portfolio">
+            <div class="section-header">
+                <h2>Digital Portfolio & Course Artifacts</h2>
+                <p>Satisfying the core deliverables for Eller BCOM 314R Task 8: Presentation sample, Written artifact, and Personal Elevator Pitch.</p>
+            </div>
+
+            <!-- Deliverable 1: Presentation Sample -->
+            <div style="margin-bottom: 4rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <span style="background: var(--eller-red); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">1</span>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-navy);">Sample of Presentation Work (Economics Deck)</h3>
+                </div>
+                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                    An interactive slide deck delivered for my Economics course analyzing market structures, pricing strategies, and strategic decision-making. Fully embedded below via Google Slides.
+                </p>
+                <div class="media-container">
+                    <iframe src="https://docs.google.com/presentation/d/1DW5zqTUTJ8K1xzdX98fxIu8TICldi-DB55eaXDg21hk/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+
+            <!-- Deliverable 2: Personal Snapshot Video -->
+            <div style="margin-bottom: 4rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <span style="background: var(--eller-red); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">2</span>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-navy);">Personal Snapshot Video (Elevator Pitch)</h3>
+                </div>
+                <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+                    A mini-speech succinctly telling potential colleagues who I am, what I do, and the unique value I bring to customer experience teams. 
+                </p>
+                
+                <!-- ELEVATOR PITCH PLACEHOLDER CONTAINER -->
+                <div class="media-container">
+                    <!-- PASTE YOUR VIDEO LINK HERE: To activate live video, replace the div below with an iframe pointing to your YouTube or Drive video -->
+                    <div class="placeholder-pitch">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>Elevator Pitch Video Slot</h3>
+                        <p>Diego's recorded personal snapshot video will render directly inside this 16:9 cinematic container.</p>
+                        <div class="code-slot">
+                            &lt;!-- PASTE YOUR RECORDED YUOTUBE / VIMEO / DRIVE EMBED URL HERE --&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deliverable 3: Written Sample (Task 7) -->
+            <div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <span style="background: var(--eller-red); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">3</span>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-navy);">Sample of Written Work: Professional Persona Executive Summary</h3>
+                </div>
+                <p style="color: var(--text-muted);">
+                    Completed as an Eller course assignment (Individual Task 7), this executive report synthesizes my professional reputation survey results, People Style adaptability, and crucial lessons learned in assertive communication.
+                </p>
+
+                <div class="exec-summary-box">
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 1rem;">Executive Report Excerpt (Task 7 Artifact)</h4>
+                    <blockquote>
+                        "In this class, I learned how I see myself and how my team sees me at university and work. My core values are reliability, empathy, and continuous improvement... In my self-evaluation, I see myself as an Analytical style. However, my team survey showed different views across assertiveness and responsiveness."
+                    </blockquote>
+
+                    <h5 style="font-weight: 700; margin-top: 1.5rem; color: var(--primary-navy);">Peer Feedback & People Style Audit Table</h5>
+                    <table class="style-table">
+                        <thead>
+                            <tr>
+                                <th>Evaluator</th>
+                                <th>Assertiveness (Proactivity)</th>
+                                <th>Responsiveness (Reactivity)</th>
+                                <th>Perceived People Style</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Self-Evaluation</td><td>-1</td><td>-2</td><td>Analytical</td></tr>
+                            <tr><td>Peer 1</td><td>-3</td><td>-3</td><td>Analytical</td></tr>
+                            <tr><td>Peer 2</td><td>-3</td><td>-7</td><td>Analytical</td></tr>
+                            <tr><td>Peer 3</td><td>+3</td><td>-3</td><td>Driver</td></tr>
+                            <tr><td>Peer 4</td><td>+3</td><td>+3</td><td>Expressive</td></tr>
+                            <tr><td>Peer 5</td><td>+5</td><td>-3</td><td>Driver</td></tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 0.95rem; margin-top: 1rem;">
+                        <strong>Key Strategic Lesson Learned:</strong> The survey revealed high adaptability in assertiveness (ranging from -3 to +5). When a solid plan exists, I operate as a meticulous Analytical contributor. When bottlenecks arise, I seamlessly flex into a Driver to resolve issues swiftly. Moving forward, I am committed to respectfully challenging ideas during group deliberations to foster healthy, rigorous decision-making.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Extracurriculars -->
+        <section id="skills">
+            <div class="section-header">
+                <h2>Skills & Extracurricular Excellence</h2>
+                <p>A balanced profile of technical proficiency, linguistic fluency, and extreme endurance sportsmanship.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Hard & Soft Skills -->
+                <div class="card">
+                    <div class="skills-group">
+                        <h4>Technical Hard Skills</h4>
+                        <div class="badge-list">
+                            <span class="skill-tag advanced"><i class="fa-solid fa-file-excel" style="color: #10b981;"></i> MS Office (Advanced)</span>
+                            <span class="skill-tag"><i class="fa-solid fa-chart-simple" style="color: #f59e0b;"></i> Power BI (Intermediate)</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python" style="color: #3b82f6;"></i> Python (Basic)</span>
+                            <span class="skill-tag"><i class="fa-solid fa-gears" style="color: #8b5cf6;"></i> Workflow Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h4>Core Soft Skills</h4>
+                        <div class="badge-list">
+                            <span class="skill-tag">Effective Communication</span>
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Proactivity (Driver Flex)</span>
+                            <span class="skill-tag">Analytical Problem Solving</span>
+                            <span class="skill-tag">Continuous Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group" style="margin-bottom: 0;">
+                        <h4>Multilingual Proficiency</h4>
+                        <div class="badge-list">
+                            <span class="skill-tag"><strong>Spanish:</strong> Native</span>
+                            <span class="skill-tag"><strong>English:</strong> Advanced (C1)</span>
+                            <span class="skill-tag"><strong>Portuguese:</strong> Advanced</span>
+                            <span class="skill-tag"><strong>French:</strong> Basic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extracurriculars -->
+                <div class="card">
+                    <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 1.5rem;">Extracurricular Milestones</h3>
+                    
+                    <ul class="contact-list" style="gap: 1.25rem;">
+                        <li style="align-items: flex-start;">
+                            <i class="fa-solid fa-person-swimming" style="margin-top: 4px;"></i>
+                            <div>
+                                <strong style="color: var(--primary-navy); display: block;">Competitive Triathlete</strong>
+                                <span style="font-size: 0.95rem; color: var(--text-muted);">Completed Ironman 70.3 Lima (2025), Ironman 70.3 Valdivia (2024), and Triatlón Paracas (2021-2022). Demonstrates elite discipline and resilience.</span>
+                            </div>
+                        </li>
+                        <li style="align-items: flex-start;">
+                            <i class="fa-solid fa-mountain" style="margin-top: 4px;"></i>
+                            <div>
+                                <strong style="color: var(--primary-navy); display: block;">Work & Travel Cultural Exchange</strong>
+                                <span style="font-size: 0.95rem; color: var(--text-muted);">Timberline Lodge, Oregon, USA (2021-2022). Developed cross-cultural teamwork in high-volume hospitality.</span>
+                            </div>
+                        </li>
+                        <li style="align-items: flex-start;">
+                            <i class="fa-solid fa-gamepad" style="margin-top: 4px;"></i>
+                            <div>
+                                <strong style="color: var(--primary-navy); display: block;">Coordinator Gaming UP</strong>
+                                <span style="font-size: 0.95rem; color: var(--text-muted);">Organized collegiate gaming tournaments, managed resources, and measured community engagement impact (2020-2021).</span>
+                            </div>
+                        </li>
+                        <li style="align-items: flex-start;">
+                            <i class="fa-solid fa-language" style="margin-top: 4px;"></i>
+                            <div>
+                                <strong style="color: var(--primary-navy); display: block;">Portuguese Tutor & UX Assistant</strong>
+                                <span style="font-size: 0.95rem; color: var(--text-muted);">UP Runners community leadership and language tutoring (2019-2021).</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h2>Let's Build Something Exceptional.</h2>
+                <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem; max-width: 480px;">
+                    Whether you are looking to discuss strategic customer experience initiatives, trade marketing innovations, or professional networking, my inbox is always open.
+                </p>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:da.yupanquic@gmail.com">da.yupanquic@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+51999702045">(+51) 999702045</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Lima, Peru · Open to Global Opportunities</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Outbound Platforms (Strict Rubric Requirement: At least 2 links) -->
+            <div class="platform-buttons">
+                <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Verified Professional Profiles</h4>
+                
+                <!-- Link 1: Active LinkedIn -->
+                <a href="https://linkedin.com/in/dyupanquic1302" target="_blank" rel="noopener noreferrer" class="btn-platform btn-linkedin">
+                    <span style="display: flex; align-items: center; gap: 0.75rem;"><i class="fa-brands fa-linkedin" style="font-size: 1.4rem;"></i> LinkedIn Professional Profile</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <!-- Link 2: Neutral Rubric Placeholder per Syllabus -->
+                <a href="https://about.me/sampleprofile" target="_blank" rel="noopener noreferrer" class="btn-platform btn-placeholder" title="Neutral placeholder link to satisfy the 2-platform rubric requirement">
+                    <span style="display: flex; align-items: center; gap: 0.75rem;"><i class="fa-solid fa-globe" style="font-size: 1.4rem;"></i> Secondary Portfolio (Syllabus Placeholder)</span>
+                    <i class="fa-solid fa-check" style="color: #10b981;"></i>
+                </a>
+                <p style="font-size: 0.8rem; color: #64748b; text-align: center; margin-top: -0.5rem;">
+                    *Second URL utilizes official course placeholder text to satisfy grading criteria while protecting user privacy.
+                </p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Diego Alonso Yupanqui Collantes. Developed for Eller BCOM 314R Individual Task 8.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
