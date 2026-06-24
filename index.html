@@ -119,7 +119,7 @@
         /* Hero Section */
         .hero {
             display: grid;
-            grid-template-columns: 1fr 400px;
+            grid-template-columns: 1fr 380px;
             gap: 4rem;
             align-items: center;
             padding: 4rem 0;
@@ -203,31 +203,40 @@
             margin: 0;
         }
 
-        .hero-image-container {
+        /* Fixed & Bulletproof Image Container */
+        .hero-image-wrapper {
             position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
         }
 
         .hero-image-backdrop {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            right: -20px;
-            bottom: -20px;
+            inset: 15px -15px -15px 15px;
             background: linear-gradient(135deg, var(--bat-slate), var(--eller-red));
             border-radius: 24px;
             z-index: 1;
         }
 
-        .hero-image {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            height: auto;
+        .hero-image-container {
+            position: absolute;
+            inset: 0;
             border-radius: 24px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             border: 4px solid white;
+            background-color: #f1f5f9;
+            z-index: 2;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            aspect-ratio: 1 / 1;
+            display: block;
         }
 
         /* Section Styling */
@@ -566,17 +575,6 @@
             transform: translateX(6px);
         }
 
-        .btn-placeholder {
-            background-color: rgba(255,255,255,0.05);
-            color: #94a3b8;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .btn-placeholder:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: white;
-        }
-
         .copyright {
             text-align: center;
             color: #64748b;
@@ -589,8 +587,8 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            .hero-image-container {
-                max-width: 380px;
+            .hero-image-wrapper {
+                max-width: 340px;
                 margin: 0 auto;
             }
             .grid-2, .footer-container {
@@ -671,9 +669,12 @@
                 </div>
             </div>
 
-            <div class="hero-image-container">
+            <!-- Bulletproof Image Wrapper -->
+            <div class="hero-image-wrapper">
                 <div class="hero-image-backdrop"></div>
-                <img src="prophoto.jpg" alt="Diego Yupanqui Collantes - Professional Headshot" class="hero-image">
+                <div class="hero-image-container">
+                    <img src="prophoto.jpg" alt="Diego Yupanqui Collantes - Professional Headshot" class="hero-image" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'padding: 2rem; text-align: center; color: #334155; font-weight: 600;\'><span>Diego Yupanqui<br><small style=\'color: #64748b; font-weight: 400;\'>[ prophoto.jpg ]</small></span></div>';">
+                </div>
             </div>
         </section>
 
@@ -774,7 +775,7 @@
             </div>
         </section>
 
-        <!-- Portfolio Deliverables (Task 8 Minimum Criteria) -->
+        <!-- Portfolio Deliverables -->
         <section id="portfolio">
             <div class="section-header">
                 <h2>Digital Portfolio & Course Artifacts</h2>
@@ -807,7 +808,6 @@
                 
                 <!-- ELEVATOR PITCH PLACEHOLDER CONTAINER -->
                 <div class="media-container">
-                    <!-- PASTE YOUR VIDEO LINK HERE: To activate live video, replace the div below with an iframe pointing to your YouTube or Drive video -->
                     <div class="placeholder-pitch">
                         <i class="fa-solid fa-video"></i>
                         <h3>Elevator Pitch Video Slot</h3>
@@ -967,24 +967,15 @@
                 </ul>
             </div>
 
-            <!-- Outbound Platforms (Strict Rubric Requirement: At least 2 links) -->
+            <!-- Outbound Platforms -->
             <div class="platform-buttons">
-                <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Verified Professional Profiles</h4>
+                <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">Verified Professional Profile</h4>
                 
-                <!-- Link 1: Active LinkedIn -->
+                <!-- Link 1: Active LinkedIn Only -->
                 <a href="https://linkedin.com/in/dyupanquic1302" target="_blank" rel="noopener noreferrer" class="btn-platform btn-linkedin">
                     <span style="display: flex; align-items: center; gap: 0.75rem;"><i class="fa-brands fa-linkedin" style="font-size: 1.4rem;"></i> LinkedIn Professional Profile</span>
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
-
-                <!-- Link 2: Neutral Rubric Placeholder per Syllabus -->
-                <a href="https://about.me/sampleprofile" target="_blank" rel="noopener noreferrer" class="btn-platform btn-placeholder" title="Neutral placeholder link to satisfy the 2-platform rubric requirement">
-                    <span style="display: flex; align-items: center; gap: 0.75rem;"><i class="fa-solid fa-globe" style="font-size: 1.4rem;"></i> Secondary Portfolio (Syllabus Placeholder)</span>
-                    <i class="fa-solid fa-check" style="color: #10b981;"></i>
-                </a>
-                <p style="font-size: 0.8rem; color: #64748b; text-align: center; margin-top: -0.5rem;">
-                    *Second URL utilizes official course placeholder text to satisfy grading criteria while protecting user privacy.
-                </p>
             </div>
         </div>
 
